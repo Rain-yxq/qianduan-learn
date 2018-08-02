@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table width="300" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">单元格</td>
+
+            <td>单元格</td>
+        </tr>
+
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+    1. 先确认跨列合并 colspan
+    2. 先上后下  先左右后
+    3. 删除的个数
+
+    <hr/>
+    <table width="300" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td rowspan="3">单元格</td>
+        </tr>
+
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+
+        </tr>
+
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+
+        </tr>
+    </table>
+    1. 先确认跨行合并 rowspan
+    2. 先上后下  先左右后
+    3. 删除的个数
+
+    <hr/>
+    <table width="300" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>单元格</td>
+            <td rowspan="2" colspan="2">单元格</td>
+
+        </tr>
+
+        <tr>
+            <td>单元格</td>
+
+
+        </tr>
+
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+</body>
+</html>
