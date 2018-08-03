@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世纪佳缘登录界面</title>
+    <style>
+        tr {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <table width="400" align="center">
+
+        <tr>
+            <th colspan="2" style="font-size: 18px; color: #666;">会员登录</th>
+        </tr>
+
+        <tr>
+            <td><label for="username">登录帐号</label></td>
+            <!--
+            这里注意，如果使用value作为输入框的默认值的话，页面上会显示黑色文字默认值，
+            需要手动删除。
+            使用placeholder的话，则会实现灰色默认值，输入任何字符则默认值则会消失。
+            -->
+            <td><input id="username" type="text" placeholder="邮箱/id/手机号"></td>
+        </tr>
+
+        <tr>
+            <td><label for="pwd">密码</label></td>
+            <td><input id="pwd" type="password" placeholder="请输入密码"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" checked="checked">
+                <span style="color: #a4a4a4; font-size: 12px">两周内自动登录</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="image" src="../img/login.png">
+                <a href="#">忘记密码</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>其他帐号登录</td>
+            <td style="font-size: 12px; color: #666">
+                <img src="../img/ico1.png"><span>&nbsp;&nbsp;QQ帐号</span>
+                <img src="../img/ico2.png"><span>&nbsp;&nbsp;新浪微博</span>
+                <img src="../img/ico3.png"><span>&nbsp;&nbsp;百度帐号</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>还不是会员？<a href="13-综合案例--注册.html" target="_blank">免费注册</a></td>
+        </tr>
+
+    </table>
+</body>
+</html>
