@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    交集选择器：语法格式为 标签选择器class选择器，中间没有任何间隔。
+    一般在多个元素class名称相同但是所在标签不同时可使用交集选择器来
+    精确定位某个元素，用的不多。
+     */
+    div.red {
+        color: red;
+    }
+
+    p.red {
+        color: red;
+    }
+</style>
+<body>
+    <div>交集选择器</div>
+    <div>交集选择器</div>
+    <div class="red">交集选择器</div>
+    <p>交集选择器</p>
+    <p>交集选择器</p>
+    <p>交集选择器</p>
+    <div>
+        <p class="red">交集选择器</p>
+    </div>
+</body>
+</html>

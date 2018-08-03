@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 后代选择器，选择出所有的li标签后代的a标签，且这里的li是ul的后代 */
+        ul li a {
+            color: red;
+        }
+        /* 子代选择器，选择出所有是li子标签的a标签（这里说的是子不是后代），且li是ul的后代 */
+        ul li > a {
+            color: green;
+        }
+
+        ul > li > a {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">一级菜单</a>
+            <div>
+                <a href="#">二级菜单</a>
+                <a href="#">二级菜单</a>
+                <a href="#">二级菜单</a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span  {
+            /* 对内联元素设置高和宽是无效的 */
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .input {
+            /*
+            虽然行内元素不能设置宽、高等属性，但是像 img、input、td等这些
+            行内块元素却可以设置宽高等属性，但是注意要直接找到这些行内元素中的
+            块元素进行设置才有用。对行内快元素外的行内元素设置宽高等属性是无效的。
+            例如下面的第一span包着input行内块元素，但是上面的span选择器设置宽、高并不会
+            对该input控件奇效，但是如果直接通过类选择器设置.input就有效了。
+            */
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <div>123</div>
+    <span>abc123123123</span>
+    <span>abc</span>
+    <span><input type="text"></span>
+    <span><input class="input" type="text"></span>
+</body>
+</html>
