@@ -5,17 +5,25 @@
     <title>Title</title>
     <style>
         div {
-            width: 190px;
+            width: 200px;
             height: 200px;
             border: 1px solid red;
-            /* 非常严重的问题， padding 会撑开 带有 widht 和height盒子 */
+            padding: 0 20px;
+            /*
+            非常严重的问题，padding会撑开带有width和height盒子.
+            比如上面这个div，我们给出的宽、高都是200px，但是如果给这个盒子加上20的左右内边距，
+            这个盒子的宽、高就会变成240*200。
+            这个时候如果我们还要求该盒子是200*200就要重新计算该盒子的宽、高了。
+            */
 
             /*
+            问：
             1. 我们要求这个 div 就是标准的 200 * 200
             2. 但是我们给了padding就撑开盒子了  240
             3. 问我们怎样能保证盒子 不超过 200 * 200
+
+            答：经过计算后，我们要将width改成160，这样被padding撑开后就是200。
             */
-            /*padding-left: 30px;*/
         }
     </style>
 </head>
