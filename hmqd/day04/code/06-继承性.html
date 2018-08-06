@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+/*        p {
+            color: red;
+        }*/
+
+        /*
+        这里为div设置样式，但是div的子标签p通过继承可以获得父标签div的样式。
+        text-，font-，line-这些元素开头的都可以继承，以及color属性。
+        因此这里的height是不能被继承的。另外需要注意，如果为子元素设置了样式，
+        并且和父元素继承来的样式重叠，那么以子元素的设置为准。这是继承的覆盖，此时
+        不存在重叠性的优先级问题。
+        就像上边为p设置红色的样式为例，给p设置了红色，从父标签继承了粉色，且按书写顺序
+        来讲父标签在最后，但是在继承的情况下这个规则不适用，只要给子标签设置了样式那么
+        就以设置的为准。
+         */
+        .jianlin {
+            color: pink;
+            font-size: 50px;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="jianlin">
+        <p>王思聪</p>
+        <p>王可可</p>
+    </div>
+</body>
+</html>

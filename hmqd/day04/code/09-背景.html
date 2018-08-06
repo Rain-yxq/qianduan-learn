@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        为body设置背景即为整个页面设置背景
+
+        body {
+            background-color: pink;
+            !* 背景图默认是横向和纵向平铺的 *!
+            background-image: url(../img/3.jpg);
+
+            !*
+            background-repeat 平铺样式的参数如下：
+            repeat (默认的) : 　背景图像在纵向和横向上平铺
+            no-repeat : 　背景图像不平铺
+            repeat-x : 　背景图像在横向上平铺
+            repeat-y : 　背景图像在纵向平铺 *!
+            background-repeat: repeat-y;
+        }
+        */
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+            background-image: url(../img/l.jpg);
+            background-repeat: no-repeat;
+            /*
+            background-position用来设置背景图的位置，我们可以直接使用方位名词
+            或更为精确的px来控制背景图的位置。如果我们使用方位名词，那么两个参数中
+            一个代表x轴一个代表y轴，x轴可以使用left、right、center；y轴可以使用
+            top、bottom、center。这两个参数不区分顺序（即先x先y都可以），但是注意
+            不能冲突，例如两个参数是top bottom就是冲突，但是可以center center。
+            记住一点，两个参数每个都从上面说的3个值中选一个就没有问题。
+
+            另外还可以使用更为精确的px来控制，对于x轴来说，输入的px值是到最左侧的距离；
+            对于y轴来说是到最顶端的距离。px和方位名词可以混用，即一条轴用px，另一轴用方位。
+            但是一定要注意的是，不管两个参数都是px还是px和方位名词混用，只要有px两个参数
+            就有顺序之分了，第1个参数是x轴，第2个是y轴，需要严格按照顺序来书写，否则不起作用。
+            */
+            background-position: 10px center;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>

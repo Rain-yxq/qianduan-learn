@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* id选择器，权重0，1，0，0 */
+        #ya {
+            color: blue;
+        }
+
+        /* class选择器，权重0，0，0，1 */
+        .yase {
+            color: green;
+        }
+
+        /* 标签选择器，权重是0，0，0，1 */
+        div {
+            color: red;
+        }
+
+        /* 标签选择器，但是使用了!important，因此权重是 +∞ */
+        div {
+            color: hotpink!important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 这里在div中定义了行内样式color，权重是1，0，0，0 -->
+    <div class="yase" id="ya" style="color: orange">亚瑟</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father { /* p的父标签div权重为0010 */
+            color: green;
+        }
+
+        /*
+        p标签的权重为0001，虽然比父标签的0010低，但是由于p的样式是继承于div，
+        因此此时对于p的样式来说，父标签的样式的权重为0，如果没有任何其他对于p
+        的样式设置，才使用父标签的样式。
+         */
+        p {
+            color: red;
+        }
+
+        div p { /* 这里设置了p的样式，且权重为0002，因此使用该样式 */
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <p>继承的问题</p>
+    </div>
+</body>
+</html>

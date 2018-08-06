@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        div {
+            /*
+            背景的透明化最后一个取值是0～1，值越大背景越深。
+            这里要注意，使用透明化背景设置的背景是黑色背景，
+            也就是说如果最后一个值设置成1的话，背景就会被黑色覆盖，
+            不管你是否设置了其他颜色或者设置了背景图片，设置透明度的话
+            都是用黑色背景来覆盖。
+            */
+            widows: 200;
+            height: 200px;
+            background-color: green;
+            color: #fff;
+            background: rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我是文字内容
+    </div>
+</body>
+</html>
