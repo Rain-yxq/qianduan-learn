@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        如果没有浮动，那么up和down各占一行。但是up盒子浮动以后，它本来的位置就不再保留了，
+        可以理解成up盒子占的那个位置就被腾出来了。因此down盒子会占据原来up盒子那个位置，
+        而up盒子此时是浮动状态，因此up会在down的上边。
+        需要注意的是：
+        1.同为漂浮的盒子是不能覆盖的，即2个漂浮的盒子之间会从左到右顺序排列（如果没设置漂浮位置的话），
+          不会存在一个漂浮的盒子漂浮在另一个漂浮的盒子之上。
+        2.漂浮的盒子不能漂浮在行内块元素上，因为设为浮动的盒子会隐式的转换为行内块元素。例如up设为漂浮，
+          将down设为inline-block或者inline，那么up是不能漂浮在down上面的，down会并排排列在up旁边。如果将down
+          设置为block(块级)，那么up是可以漂浮在它们之上的。
+        3.有两个块级元素A、B，它们分别占据了一行。如果此时A浮动，B不浮动，那么就像上边说的，A的位置会
+          腾出来，然后B占据A的位置，A漂浮于B的上边；但是反过来，如果A不浮动，B浮动，那么A此时已经占据了
+          一行，此时B是无法漂浮在A这一行的，因此这时A还是在第一行，而B是在第二行漂浮，例子见10-浮动特性--对齐。
+          总结一句就是，浮动只对它下面的盒子有影响。
+        */
+        .up {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .down {
+            width: 320px;
+            height: 220px;
+            background-color: purple;
+            /*display: inline;*/
+            float: left;
+        }
+
+        div {
+            /*
+            其实我们使用浮动最大的需求就是让块级元素能在同一行显示，但是说到这里会想为什么不用inline-block？
+            它也能让块级元素在同一行显示呀。
+            使用inline-block会有两个问题无法解决：
+            1.行内的每个盒子间会有空隙，无法去除（非要去除也行，但是由于浏览器兼容性问题要写很多代码）。
+            2.如果想让某个盒子靠最后边，这个需求无法实现，因为只能按照顺序从左到右排列。
+            */
+            /*height: 100px;*/
+            /*width: 100px;*/
+            /*background-color: pink;*/
+            /*display: inline-block;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="up"></div>
+    <div class="down">111</div>
+</body>
+</html>

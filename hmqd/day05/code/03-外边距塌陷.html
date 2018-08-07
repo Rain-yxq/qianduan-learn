@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并。
+        合并后的外边距为两者中的较大者，即使父元素的上外边距为0，也会发生合并。
+        注意，这种情况只发生在上外边距的情况。
+
+        如下的例子中，father的没有内边距或者边框，虽然没有设置外边距（上），
+        但是由于嵌套的上外边距合并原则，此时father会合并son的上外边距，因此这时
+        father的上外边距为50px，son的上外边距被合并了故为0。
+        最终合并后的上外边距的大小要看谁的外边距更大，假设此时father的上外边距是100，
+        由于father的100大于son的50，故合并后father的上外边距为100，son为0。
+        */
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            /* 解决嵌套上外边距合并的方法1：为外层盒子添加边框，注意边框不能为none，必须是能看得见的边框 */
+            /*border-top: 1px dashed red;*/
+
+            /* 解决方法2：为外层盒子添加大于1px的内边距（只是为了消除边距合并，为了不看出内边距，添加1px即可） */
+            /*padding-top: 1px;*/
+
+            /* 解决方案3：为外层盒子的元素添加 overflow: hidden  */
+            overflow: hidden;
+
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

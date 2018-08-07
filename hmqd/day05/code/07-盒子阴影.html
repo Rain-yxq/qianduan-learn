@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            /*
+            box-shadow:水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色  内/外阴影
+            最后一个参数不写默认是外阴影 (outset)，并且使用外阴影时不能写outset，
+            如果想使用内阴影，就加上inset即可。
+            */
+            /*box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.4);*/
+            /*transition: all 1s;*/
+        }
+
+        div:hover { /* 鼠标经过时加阴影 */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+    <body>
+        <div>
+
+        </div>
+    </body>
+</html>

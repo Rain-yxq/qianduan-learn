@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        让一个盒子实现水平居中，需要满足一下两个条件：
+        1. 必须是块级元素。
+        2. 盒子必须指定了宽度（width）
+        然后就给左右的外边距都设置为auto，就可使块级元素水平居中。
+
+        文字居中和盒子居中的区别：
+        文字水平居中是  text-align: center
+        盒子水平居中  左右margin 改为 auto
+        */
+        div {
+            text-align: center;
+            width: 300px;
+            height: 100px;
+            line-height: 100px; /* 文字行间距 = 盒子height 即可让文字垂直居中 */
+            background-color: pink;
+
+            margin: 100px auto; /* 和内边距简写的形式一样，两个值分别代表上下、左右外边距。auto代表自动填充满 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        哈哈～～
+    </div>
+</body>
+</html>

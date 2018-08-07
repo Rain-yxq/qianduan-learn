@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 100px;
+            background-color: pink;
+            /*
+            如果不加浮动，那么div默认的宽度是占据一整行。但是加了浮动以后发现：
+            1.div的宽度和内容一致。
+            2.行内元素（如下面的span）会和该div并排在同一行。
+            这说明，元素设置为浮动后会隐式转换为行内块元素，注意，这里不是说转换成了真正的行内块元素，
+            而是具有行内块元素的特性，因为浮动后的元素之间没有空隙，但是行内块元素间有，这就说明它不是真正
+            的行内块元素。
+            */
+            float: left;
+        }
+        span {
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+            /* span是行内元素，不能设置宽、高，当将它设置为浮动后，它就转换成了行内块元素，此时可以设置宽高 */
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>大大大</div>
+    <span>123123123</span>
+</body>
+</html>

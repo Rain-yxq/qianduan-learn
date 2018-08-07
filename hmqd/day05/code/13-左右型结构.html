@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        .top-inner {
+            background-color: #eee;
+            width: 900px;
+            height: 50px;
+            margin: 0 auto;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .banner {
+            height: 100px;
+            width: 900px;
+            margin: 5px auto;
+            background-color: #eee;
+        }
+        .banner li {
+            width: 225px;
+            height: 100px;
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            list-style: none; /* 去除列表前边的点 */
+        }
+
+        .main {
+            height: 500px;
+            margin: 0 auto;
+        }
+        .main .left {
+            width: 290px;
+            line-height: 500px;
+            text-align: center;
+            background-color: #eee;
+            border: 1px dashed #ccc;
+            float: left;
+            margin-left: 213px;
+        }
+
+        .main .right {
+            width: 608px;
+            line-height: 500px;
+            text-align: center;
+            background-color: #ccc;
+            border: 1px dashed #eee;
+            float: left;
+        }
+
+        .footer {
+            width: 900px;
+            height: 150px;
+            background-color: #eee;
+            margin: 5px auto;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-inner">顶部</div>
+    </div>
+
+    <div class="banner">
+        <ul>
+            <li class="one">首页</li>
+            <li class="two">分类</li>
+            <li class="three">设为首页</li>
+            <li class="four">联系我们</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+
+    <div class="footer">底部</div>
+</body>
+</html>
