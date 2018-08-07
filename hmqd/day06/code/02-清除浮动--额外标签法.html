@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        color: yellow;
+    }
+
+    .father {
+        border: 1px solid red;
+        width: 300px;
+    }
+
+    .big {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        float: left;
+    }
+
+    .small {
+        width: 80px;
+        height: 80px;
+        background-color: blue;
+        float: left;
+    }
+
+    .footer {
+        width: 400px;
+        height: 100px;
+        background-color: pink;
+    }
+
+    .clear {
+        /* 如果清除了浮动，父标签去自动检测子标签的高度，以最高的为准来保持自己的高度 */
+        /* 额外标签法的弊端： 添加许多无意义的标签，结构化较差。 */
+        clear: both;
+    }
+
+</style>
+<body>
+    <div class="father">
+        <div class="big">big</div>
+        <div class="small">small</div>
+        <!-- 最后一个浮动标签的后边，新添加一个标签用来清除浮动 -->
+        <div class="clear"></div>
+    </div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

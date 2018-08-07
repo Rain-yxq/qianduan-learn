@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+        .father {
+            border: 1px solid red;
+            width: 300px;
+
+        }
+        div {
+            color: yellow;
+        }
+
+        .father {
+            border: 1px solid red;
+            width: 300px;
+        }
+
+        .big {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            float: left;
+        }
+
+        .small {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            float: left;
+        }
+
+        .footer {
+            width: 400px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father clearfix">
+        <div class="big">big</div>
+        <div class="small">small</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

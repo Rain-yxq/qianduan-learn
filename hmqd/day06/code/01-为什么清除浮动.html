@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    由于father这个div没有定义height，如果没有浮动的话，.big和.small在father内部会将其撑开。
+    这样，footer还是会在它们下边显示。
+    但是如果.big和.small都加了浮动，它们就会漂浮，从而使得father中没有内容了，这时father的
+    高度就变成0了，此时footer就会在father的下一行，而big和small漂浮在footer，就像该示例运行后的效果。
+    */
+
+    .father {
+        border: 1px solid red;
+        width: 300px;
+    }
+    
+    .big {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        float: left;
+    }
+
+    .small {
+        width: 80px;
+        height: 80px;
+        background-color: blue;
+        float: left;
+    }
+
+    .footer {
+        width: 400px;
+        height: 100px;
+        background-color: pink;
+    }
+
+    div {
+        color: yellow;
+    }
+</style>
+<body>
+    <div class="father">
+        <div class="big">big</div>
+        <div class="small">small</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

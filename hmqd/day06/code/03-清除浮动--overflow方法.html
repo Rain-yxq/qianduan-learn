@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            color: yellow;
+        }
+
+        .father {
+            border: 1px solid red;
+            width: 300px;
+            /* 给需要清除浮动的父元素添加 */
+            /* 弊端：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素 */
+            overflow: hidden;
+        }
+
+        .big {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            float: left;
+        }
+
+        .small {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            float: left;
+        }
+
+        .footer {
+            width: 400px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="big">big</div>
+        <div class="small">small</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>
