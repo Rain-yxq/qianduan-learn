@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            /* 转成块是为了一列显示 */
+            display: block;
+            width: 448px;
+            height: 252px;
+            margin: 100px;
+            position: relative;
+        }
+
+        /*
+        首先用.mask这个盒子设置绝对定位来完全覆盖到图片上
+        .mask其实就是一个和a标签中图片一样大小的一个超链接，
+        将超链接设置成块元素来给其设置宽高，然后在给这个超链接
+        设置一张背景图，就是播放按钮，背景颜色设置成半透明色，
+        半透明覆盖在原图片上，原图片就变成了半透明。
+        */
+        .mask {
+            width: 448px;
+            height: 252px;
+            background: rgba(0, 0, 0, .4) url(../img/arr.png) no-repeat center center;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            /* 鼠标不经过图片时，半透明播放的盒子应该是隐藏的 */
+            visibility: hidden;
+        }
+
+        /* 下面这个选择器的意思是，当鼠标经过a的时候，去选择 .mask元素 */
+        a:hover .mask {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <img src="../img/tudou.jpg" height="252" width="448">
+        <div class="mask"></div>
+    </a>
+    <a href="#">
+        <img src="../img/tudou.jpg" height="252" width="448">
+        <div class="mask"></div>
+    </a>
+    <a href="#">
+        <img src="../img/tudou.jpg" height="252" width="448">
+        <div class="mask"></div>
+    </a>
+</body>
+</html>

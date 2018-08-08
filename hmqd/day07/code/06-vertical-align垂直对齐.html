@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            /* 设置图片和基线对齐（默认） */
+            /*vertical-align: baseline;*/
+
+            /* 设置图片和底线对齐 */
+            /*vertical-align: bottom;*/
+
+            /* 设置图片和中线对齐 */
+            /*vertical-align: middle;*/
+
+            /* 设置图片和顶线对齐 */
+            /*vertical-align: top;*/
+
+            /*
+            注意！vertical-align不影响块级元素中内容的对齐方式，
+            这里由于img是行内块元素，因此可以使用。
+
+            vertical-align只影响行内元素和行内块元素。特别是行内块元素，
+            通常用来控制图片/表单与文字的对齐。
+            */
+
+            display: block;
+        }
+
+        div {
+            /*
+            如果某个行内块元素外边套了一个没设置高度的盒子，那么该盒子是随着内容被撑开的。
+            我们知道，图片、表单等行内块元素默认是和文字的基线对齐，那么其实文字的
+            基线和底线之间的距离 + 文字下边距 会形成一个空白的缝隙。
+
+            解决方法：
+            1.设置vertical-align不要和基线对齐。
+            2.由于vertical-align对块级元素不起作用，因此块级元素也不会和文字的基线对齐，
+              所以将 行内、行内块 元素转换成块级元素即可。此例子中，将img这个行内块转成块元素。
+            */
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../img/tudou.jpg">
+        <!--xxaa图片默认是和基线jixian对齐的。-->
+    </div>
+</body>
+</html>
