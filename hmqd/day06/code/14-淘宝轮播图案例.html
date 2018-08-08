@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb {
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .tb a {
+            display: block;
+            width: 24px;
+            height: 36px;
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+        }
+
+        .left {
+            background: url(../img/left.png) no-repeat;
+            left: 0;
+        }
+
+        .right {
+            background: url(../img/right.png) no-repeat;
+            right: 0;
+        }
+
+        .tb ul {
+            width: 70px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 8px;
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            margin-left: -35px;
+        }
+
+        .tb ul li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            float: left;
+            margin: 3px;
+        }
+        
+        .tb .current {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="tb">
+        <img src="../img/tb.jpg" >
+        <a href="#" class="left"></a>
+        <a href="#" class="right"></a>
+        <ul>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

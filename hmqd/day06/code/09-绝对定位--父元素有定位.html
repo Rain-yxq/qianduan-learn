@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* 父元素有50px的内边距 */
+            padding: 50px;
+            /* 父亲有定位（absolute绝对定位） */
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            /*
+            在父元素（或祖先）有定位的情况下（静态定位除外），
+            子元素将以离它最近的有定位的父元素（或祖先）的左上角位基准，
+            进行移动，内外边距不会对子元素的偏移量有影响，也就是说就算
+            父元素设置了内（外）边距，子元素依然是以父元素的左上角为基准
+            来偏移，而不是以内（外）边距为基准。
+            */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

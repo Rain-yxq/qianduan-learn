@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /*加了绝对定位、浮动的盒子，margin 0 auto 就失效了*/
+            /*margin: 100px auto;*/
+            position: absolute;
+            /* 1.首先通过边偏移到父盒子的50%大小，此时会超出子盒子一半的大小 */
+            left: 50%;
+            /* 2.然后通过 margin-left：- 子盒子宽度的一半 来往回退一半 */
+            margin-left: -100px;
+
+            /* 垂直居中也是同理 */
+            top: 50%;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+            /*
+            元素定位需要设置两个属性：定位模式和边偏移。
+            定位模式决定了元素怎么样去偏移，而偏移决定了元素具体偏移多少（方向和大小）。
+            */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .top {
+            /* 设置偏移模式为相对定位：
+            1.相对定位每次移动的位置，是以自己的左上角为基点移动（相对于自己来移动位置）
+            2.相对定位最重要的一点是，它可以通过边偏移来移动位置，但是原来的所占的位置，
+              继续占有，即原来的位置不会脱标（脱离标准流）。
+            */
+
+            position: relative;
+            top: 100px;
+            right: 100px;
+            /*
+            上边这个例子中，top元素虽然定位到了别的位置，但是bottom盒子不会移动到top原来的
+            位置，因为top虽然移走了，但是之前的位置依然占据。
+            就是说，相对定位的盒子仍在标准流中，它后面的盒子仍以标准流方式对待它（相对定位不脱标），
+            如果说浮动的主要目的是 让多个块级元素一行显示，那么定位的主要价值就是移动位置，
+            让盒子到我们想要的位置上去。
+            */
+        }
+
+        .bottom {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="bottom"></div>
+</body>
+</html>

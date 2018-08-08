@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            height: 100px;
+            width: 200px;
+            background-color: pink;
+            /*
+            和浮动一样，元素添加了绝对定位或者固定定位以后，可以隐式转换为行内块元素。
+            此时，不需要显示的display转换即可为行内元素设置宽、高。
+            注意，添加相对定位不会进行转换。
+            到此，浮动、绝对定位、固定定位均可以使元素转换为行内块元素。
+             */
+            position: fixed;
+            /*position: absolute;*/
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">百度一下</a>
+</body>
+</html>

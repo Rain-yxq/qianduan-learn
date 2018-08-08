@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+            margin: 100px;
+        }
+
+        .son {
+            height: 200px;
+            width: 200px;
+            background-color: purple;
+            /*
+            1. 由于father元素没有定位，因此son的偏移是以浏览器屏幕为基准。
+            2. 和浮动不同，浮动不会脱离父元素的盒子，而定位是可以脱离的。
+            */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>
