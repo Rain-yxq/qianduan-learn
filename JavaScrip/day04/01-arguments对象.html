@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        * arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。
+        * 也就是说所有函数都内置了一个arguments对象，arguments对象中存储了传递的所有的实参。
+        * arguments是一个伪数组，因此及可以进行遍历。
+        *
+        * 例如现在有一个需求，计算n个数字的和：
+        * 定义一个函数,但是不确定用户是否传入了参数,或者说不知道用户传了几个参数，
+        * 那此时我们就无法进行计算。但是如果我们知道了参数的个数,也知道了每个参数的值
+        * 那么就可以进行计算了。
+        * */
+        function getSum() {
+            var sum = 0;
+            // 使用arguments对象来获取传入的参数。
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        // 定义函数时没有参数，而传入了参数是因为js和java在这里不太一样
+        // js允许函数调用时传入的实参和定义函数时的形参个数不一致。
+        var total = getSum(1,2,10,99,5);
+        console.log(total);
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

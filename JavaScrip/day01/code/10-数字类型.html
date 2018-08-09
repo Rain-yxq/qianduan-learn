@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+   /*
+    * 数字类型:整数和小数
+    *
+    * num=20;整数
+    * num=98.76;小数(其他的语言中,浮点型---单精度,双精度浮点)
+    * 所有的数字都是属于number类型。
+    *
+    * 其他的语言:
+    * 整数类型:int
+    * 单精度浮点型:float
+    * 双精度浮点型:double
+    *
+    *
+    * js中可以表示哪些进制？
+    * var num=10; //十进制
+    *
+    * var num2=012; //八进制（以0开头，后边的数字不能超过8）
+    * 为了更好的区分八进制，js允许八进制以0o开头，即0o123
+    * var num3=0x123;//十六进制
+    **/
+
+   // var num = 0o123;
+   // alert(num)
+
+</script>
+<script>
+    //数字类型有范围: 最小值和最大值
+    //    console.log(Number.MAX_VALUE);//数字的最大值
+    //    console.log(Number.MIN_VALUE);//数字的最小值
+
+
+    //不要用小数去验证小数,因为小数的四则运算会有失精问题
+    //    var x=0.1;
+    //    var y=0.2;
+    //    var sum=x+y;
+    //    console.log(sum==0.3);
+
+
+    //不要用NaN验证是不是NaN
+
+    //    var num;
+    //    console.log(num+10==NaN);
+    //    console.log("您好"=="我好");
+
+    //如果验证是不是数字,应该使用isNaN()
+    //注意，isNan比较坑的是，它的意思是这样的：不是一个数字吗？ NaN--->不是一个数字
+    //如果不是数字，会输出true；如果是数字，会输出false。
+    var num;
+    console.log(isNaN(num));
+
+</script>
+<body>
+
+</body>
+</html>

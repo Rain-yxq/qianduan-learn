@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function f1() {
+        // 这里打印num的结果是undefined而不是报错，这就说明代码执行到打印这里时，
+        // num已经被定义过了（如果没定义会报错），原因就是我们前边说的，变量会被
+        // 预解析，但是注意，预解析的只是变量声明，不包括变量赋值，因此结果是undefined。
+        console.log(num);
+        var  num = 10;
+    }
+    f1();
+
+    // 预解析的提升只能在自己所在的块内提升，就如此例，f1()中的num是局部变量，它的作用域是f1
+    // 这个函数，因此它只能在f1内部被提升，而不是提升到全局中去，因此在函数外部输出num变量会报错。
+    console.log(num);
+</script>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 其他类型转数字类型，三种方式：
+
+        // 1. parseInt() 转成整数，
+        //    console.log(parseInt("10")); //10
+        // 如果第一个字符是数字会解析知道遇到非数字结束
+        //    console.log(parseInt("10afrswfdsf")); //10
+        // 如果第一个字符不是数字或者符号就返回NaN
+        //    console.log(parseInt("g10"));//NaN
+        //    console.log(parseInt("1fds0"));//1
+        //    console.log(parseInt("10.98"));//10
+        //    console.log(parseInt("10.98fdsfd"));//10
+
+        /*
+        * 2. parseFloat() 转小数
+        * parseFloat会解析第一个.(小数点) 遇到第二个.（小数点）或者非数字结束。
+        * 如果解析的内容里只有整数，解析成整数
+        * */
+        //    console.log(parseFloat("10"));//10
+        //    console.log(parseFloat("10afrswfdsf"));//10
+        //    console.log(parseFloat("g10"));//NaN
+        //    console.log(parseFloat("1fds0"));//1
+        //    console.log(parseFloat("10.98"));//10.98
+        //    console.log(parseFloat("10.98fdsfd"));//10.98
+
+        // 3. Number(); 可以把任意值转换成数值（整数或小数），如果要转换的字符串中有一个不是数值的字符，返回NaN
+        //    console.log(Number("10"));//10
+        //    console.log(Number("10afrswfdsf"));//NaN
+        //    console.log(Number("g10"));//NaN
+        //    console.log(Number("1fds0"));//NaN
+        //    console.log(Number("10.98"));//10.98
+        //    console.log(Number("10.98fdsfd"));//NaN
+
+        //总结:想要转整数用parseInt(),想要转小数用parseFloat()，想要转数字:Number();要比上面的两种方式严格。
+
+    </script>
+
+    <script>
+        //其他类型转字符串类型，3种方法：
+
+        // 1. 调用toString()
+        //    var num=10;
+        //    console.log(num.toString());//字符串类型
+
+        // 2. String();
+        // var num1=20;
+        // console.log(String(num1));
+
+        //如果变量有意义调用.toString()使用转换
+        //如果变量没有意义使用String()转换
+
+        // 如下，变量没有意义如果调用toString()的话，浏览器控制台中会报错。
+        //    var num2;
+        //    console.log(num2.toString());
+        //    var num3=null;
+        //    console.log(num3.toString());
+
+        // 使用String（）可以转换无意义的变量
+        //    var num2;
+        //    console.log(String(num2));
+        //    var num3=null;
+        //    console.log(String(num3));
+
+        // 3. 通过字符串拼接转成字符串 例子略。
+
+    </script>
+    <script>
+        // 其他类型转布尔类型，Boolean(xxx)
+        // 0  ''(空字符串) null undefined NaN 会转换成false，其它都会转换成true
+
+        //    console.log(Boolean(1));//true
+        //    console.log(Boolean(0));//false
+        //    console.log(Boolean(11));//true
+        //    console.log(Boolean(-10));//true
+        //    console.log(Boolean("哈哈"));//true
+        //    console.log(Boolean(""));//false
+        //    console.log(Boolean(null));//false
+        //    console.log(Boolean(undefined));//false
+    </script>
+    <script>
+        var str = "500";
+        console.log(+str); // 取正
+        console.log(-str); // 取负
+        console.log(str - 0); // "500"隐式转换成数字
+        console.log(typeof (str - 0));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

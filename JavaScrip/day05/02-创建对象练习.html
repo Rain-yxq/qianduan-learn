@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //练习1: 有一个黄色的小狗,叫大黄,今年已经三岁了,250斤的重量每次走路都很慢,喜欢吃大骨头
+    var dog = new Object();
+    dog.name = "大黄";
+    dog.age = 3;
+    dog.color = "黄色";
+    dog.weight = 250;
+    dog.walk = function () {
+        console.log("走的很慢...");
+    };
+    dog.eat = function () {
+        console.log("吃骨头...");
+    };
+
+    dog.eat();
+    dog.walk();
+</script>
+
+<script>
+    // 练习2: 创建一个手机对象,手机有型号,有颜色,可以打电话和发短信
+    var phone = new Object();
+    phone.model = "z17";
+    phone.color = "gold";
+    phone.call = function () {
+        console.log("打电话...");
+    };
+    phone.sendMsg = function () {
+        console.log("发短信...");
+    };
+
+    phone.call();
+    phone.sendMsg();
+
+</script>
+<body>
+
+</body>
+</html>

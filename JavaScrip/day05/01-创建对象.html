@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+         /*
+          * 创建对象三种方式：
+          *
+          * 1.调用系统的构造函数创建对象
+          * var 变量名= new Object(); Object是系统的构造函数
+          *
+          * 2.自定义构造函数创建对象(结合第一种和需求通过工厂模式创建对象)
+          *
+          * 3.字面量的方式创建对象
+          * */
+
+         var person = new Object();
+         person.name = "张三";
+         person.age = 18;
+         person.cook = function () {
+             console.log("正在做饭...");
+         };
+
+         // 获取属性
+         console.log(person.name);
+         console.log(person.age);
+         // 对象方法调用
+         person.cook();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

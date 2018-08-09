@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = {
+            name : "小明",
+            age : 18,
+            gender : "male"
+        };
+
+        // 不能用普通的for循环像遍历数组那样遍历对象的属性，因为对象中的属性是无序的。
+        // 可以通过for-in循环来遍历对象中的属性，这里引出一个关键字 key ，
+        // 它可以存储对象中的所有属性的键（很象map中的keyset）
+        // for遍历对象属性的语法格式： for( var key in xx对象)
+        for(var key in person){
+            console.log(key + "=====" + person[key]);
+        }
+
+        // 可以通过delete关键字删除对象的属性
+        console.log("删除前的name是：" + person.name);
+        delete person.name;
+        console.log("删除后的name是：" + person.name);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
