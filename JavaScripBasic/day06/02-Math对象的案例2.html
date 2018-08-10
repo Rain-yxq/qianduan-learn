@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        // 创建一个包含十六进制数字的数组
+        var colorArr = ["0", "1", "2", "3", "4", "5", "6", "7",
+            "8", "9", "a", "b", "c", "d", "e", "f"];
+
+        // 封装随机颜色函数
+        function getRandomColor() {
+            var colorStr = "#";
+            // 因为色值有6位，因此循环6次随机获取每位的色值
+            for (var i=0; i < 6; i++) {
+                // 获取一个16以内的随机数，将该数当作索引去获取数组内对应的值
+                // * 16 代表随机数会在0～16之间，会包含小数，parseInt保证了取整。
+                var index = parseInt(Math.random() * 16);
+
+                index instanceof Number ?  colorStr += colorArr[index] :
+                    console.log("发生错误");
+                colorStr += colorArr[index];
+            }
+            return colorStr;
+        }
+
+        //页面记载的事件
+        window.onload = function () {
+            //在文档中通过id属性的值查找这个元素(标签).设置该标签的背景颜色
+            document.getElementById("dv").style.backgroundColor = getRandomColor();
+        };
+
+    </script>
+</head>
+<body>
+    <div id="dv"></div>
+</body>
+</html>

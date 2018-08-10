@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //例子:自己定义一个对象,实现系统的max的方法
+    function MyMath() {
+        this.getMax = function () {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+    }
+
+    var myMath = new MyMath();
+    var max = myMath.getMax(8,3,9,1,6,19,18,2);
+    console.log("最大值为" + max);
+</script>
+<body>
+
+</body>
+</html>
