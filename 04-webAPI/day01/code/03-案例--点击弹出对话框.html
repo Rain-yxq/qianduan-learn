@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 点击操作是一个事件-->事件：一件事，有事件源、触发行为、响应
+         * 按钮：事件源
+         * 点击：触发行为，一般是用户进行触发
+         * 响应：弹出对话框，一般通过js函数来定义响应行为
+         */
+    </script>
+</head>
+<body>
+    <!--第一个版本，点击按钮弹出对话框-->
+    <!--<input type="button" value="显示效果" onclick="alert('我被点了')" />-->
+    <!--缺点：html代码中嵌入了js的代码,不方便后期的修改和维护-->
+
+    <!--最终的版本，js和html分离-->
+    <input type="button" value="请点击" id="btn">
+
+    <script>
+        // 根据id属性的值从整个文档中获取这个元素(标签)
+        var btnObj = document.getElementById("btn");
+        // 定义事件的响应行为（通常是js函数）
+        function f1(){
+            alert("哈哈");
+        }
+        // 为这个元素注册点击事件
+        // 注意这里一定不能加括号，因为加了括号就相当于调用函数，
+        // 那么即使不点击按钮也会触发弹窗，因为当给按钮注册事件时就调用了这个函数，
+        // 那么这个函数就执行了。如果不加括号，那么就是仅仅将这个函数（行为）注册到
+        // 这个事件（onclick）上，只有当点击按钮即触发事件时，才会调用函数给出响应。
+        btnObj.onclick = f1;
+    </script>
+
+
+
+</body>
+</html>

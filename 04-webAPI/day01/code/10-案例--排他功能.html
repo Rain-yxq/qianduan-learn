@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="没怀孕"/>
+    <input type="button" value="没怀孕"/>
+    <input type="button" value="没怀孕"/>
+    <input type="button" value="没怀孕"/>
+    <input type="button" value="没怀孕"/>
+    <input type="button" value="没怀孕"/>
+
+    <script>
+        //获取所有的按钮,分别注册点击事件
+        var btnObjs = document.getElementsByTagName("input");
+        //循环遍历所有的按钮
+        for (var i = 0; i < btnObjs.length; i++) {
+            // 因为事件注册要先于事件的触发，只有在点击按钮的时候才会触发function()函数
+            // 但是在触发事件之前，其实每个事件已经绑定到了6个按钮上，只是没触发而已。
+            // 点击某个按钮的时候，就会触发这个按钮的function（）完成响应。
+            btnObjs[i].onclick = function () {
+                //把所有的按钮的value值设置为默认的值:没怀孕
+                for (var j = 0; j < btnObjs.length; j++) {
+                    btnObjs[j].value = "没怀孕";
+                }
+                //当前被点击的按钮设置为:怀孕了
+                this.value = "怀孕了";
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+    表单元素中的name和value都是干嘛的？
+    它们都是用来向后台提交的，name主要是告诉后台这是个什么元素，
+    对应到后台就是参数名，而value就是参数值。
+    例如radio单选框，相同name的选项组成一组才能进行但选，最终提交到后台就是
+    name（参数名） value（参数值，即用户最终选择的选项）。
+    多选checkbox亦是此道理。
+    -->
+    <input type="button" value="选择默认性别" id="btn1"/>
+    <input type="radio" value="1" name="sex"/>男
+    <input type="radio" value="2" name="sex" id="rad1"/>女
+    <input type="radio" value="3" name="sex"/>保密
+
+    <script>
+        // 需求，点击按钮单选框选择女
+
+        function my$(id) {
+            return document.getElementById(id);
+        }
+
+        // 思路：若想选中"女"，就需要给value=2的元素添加checked属性。
+        // 我们知道checked这个属性是没有值的，加上checked就会默认选中，
+        // 如果非要给它加个值，那就是它本身，即checked="checked"。
+        // 对于这样的属性，我们在使用js操作DOM的时候可以直接给该属性赋boolean值true。
+        my$("btn1").onclick = function () {
+            my$("rad1").checked = true;
+        }
+    </script>
+    <br>
+
+    <input type="button" value="选择兴趣" id="btn2"/>
+    <input type="checkbox" value="1" name="xingqu" />吃饭
+    <input type="checkbox" value="2" name="xingqu" />睡觉
+    <input type="checkbox" value="3" name="xingqu" id="ck1" />打豆豆
+    <input type="checkbox" value="4" name="xingqu" />打篮球
+    <input type="checkbox" value="5" name="xingqu" />打足球
+    <input type="checkbox" value="6" name="xingqu" id="ck2" />打铅球
+    <script>
+        my$("btn2").onclick = function () {
+            my$("ck1").checked =true;
+            my$("ck2").checked =true;
+        }
+    </script>
+</body>
+</html>

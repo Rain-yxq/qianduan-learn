@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--这个案例就算不加js也能实现这个效果，因为本身点击图片就能链接到a的href中去，这里只是为了练习-->
+    <a id="ak" href="../images/1.jpg"><img id="img" src="../images/1-small.jpg"></a>
+
+    <script>
+        document.getElementById("img").onclick = function () {
+            // 因为此函数是为img元素绑定事件的响应函数，所以this指的就是img元素
+            this.src = document.getElementById("ak").href;
+        }
+    </script>
+
+</body>
+</html>

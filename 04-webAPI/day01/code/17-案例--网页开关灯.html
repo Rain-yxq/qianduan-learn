@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cls {
+            background-color: #3c3c3c;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn" value="开/关灯">
+    <script>
+
+        document.getElementById("btn").onclick = function() {
+            // 判断body有没有class属性，有就关灯，没有就开灯
+            document.body.className = document.body.className === "cls"? "" : "cls";
+        };
+
+    </script>
+</body>
+</html>

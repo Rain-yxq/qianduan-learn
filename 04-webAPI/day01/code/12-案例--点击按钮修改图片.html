@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="点击显示大图" id="btn"/>
+    <img src="../images/1-small.jpg" id="im">
+
+    <script>
+        // 封装通过id获取元素的函数，以便复用
+        function my$(id) {
+            return document.getElementById(id);
+        }
+
+        my$("btn").onclick = function () {
+            my$("im").src = "../images/1.jpg";
+        };
+    </script>
+</body>
+</html>
