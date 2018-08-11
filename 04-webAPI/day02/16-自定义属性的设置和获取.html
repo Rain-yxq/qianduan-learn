@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="uu">
+        <li>助教的数学成绩</li>
+        <li>班主任的成绩</li>
+        <li>小苏的成绩</li>
+        <li>小杰老师成绩</li>
+        <li>乔峰成绩</li>
+    </ul>
+
+    <script>
+        // 获取自定义属性使用 getAttribute("自定义属性名")
+        // 设置自定义属性使用 setAttribute("自定义属性名", "属性值")
+        var liArrs = document.getElementsByTagName("li");
+        for (var i = 0; i < liArrs.length; i++) {
+            // 设置自定属性
+            liArrs[i].setAttribute("score", (i+1)*10);
+            // 点击列表获取自定义的属性
+            liArrs[i].onclick = function () {
+                alert(this.innerText + "是：" + this.getAttribute("score"));
+            }
+        }
+    </script>
+</body>
+</html>

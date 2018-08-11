@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="uu">
+        <!-- source属性不是html自带的，是我们自定义的 -->
+        <li score="10">助教的数学成绩</li>
+        <li score="20">班主任的成绩</li>
+        <li score="30">小苏的成绩</li>
+        <li score="40">小杰老师成绩</li>
+        <li score="50">乔峰成绩</li>
+    </ul>
+
+    <script>
+        /*
+        自定义属性---为了存储一些数据，如果想要获取自定义属性，
+        需要使用etAttribute("自定义属性的名字")才能获取这个属性的值，
+        不能象获取html自带属性那样直接通过 .属性名 获取。
+         */
+        var liArrs = document.getElementsByTagName("li");
+        for (var i = 0; i < liArrs.length; i++) {
+            liArrs[i].onclick = function () {
+                alert(this.innerText + "是：" + this.getAttribute("score"));
+            }
+        }
+    </script>
+
+</body>
+</html>

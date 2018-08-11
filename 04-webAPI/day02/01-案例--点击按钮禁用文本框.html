@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="禁用文本框" id="btn"/>
+    <input type="text"  value="我是一个文本框" id="txt"/>
+
+    <!-- 注意，引入js文件的script标签中不能写js代码，因此这里单独给出一个标签来引入文件 -->
+    <script src="js/common.js"></script>
+    <script>
+        my$("btn").onclick = function () {
+            // 设置disabled=true可以设置元素禁用
+            my$("txt").disabled = true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="请输入搜索内容" id="txt"/>
+    <script>
+        // onfocus 获取焦点事件
+        document.getElementById("txt").onfocus = function () {
+            // 判断文本框是不是默认的value的内容，如果是就情空
+            if (this.value === "请输入搜索内容") {
+                this.value = ""; // 清空文本框中的内容
+                this.style.color = "black";
+            }
+        };
+
+        // onblur 失去焦点事件
+        document.getElementById("txt").onblur = function () {
+            // 判断文本框是不是为空，如果为空就设置value为默认值
+            if (this.value.length === 0) {
+                this.value = "请输入搜索内容";
+                this.style.color = "gray";
+            }
+        };
+    </script>
+</body>
+</html>

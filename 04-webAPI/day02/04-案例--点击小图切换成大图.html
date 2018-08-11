@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- 这样的a标签，本身点击小图就会切换成大图 -->
+    <a href="images/1.jpg" id="ak">
+        <img src="images/1-small.jpg">
+    </a>
+    <!-- 但是现在的需求是，想点击小图在下边这个img中显示大图，并且a标签不链接到大图 -->
+    <img src="" id="img"/>
+
+    <script>
+        // 思路：按钮绑定事件，使得点击按钮为img标签添加属性，同时禁用超链接
+        document.getElementById("ak").onclick = function () {
+            // 将a标签的href属性的值赋给img标签的src属性
+            document.getElementById("img").src = this.href;
+            // 禁用a标签的超链接
+            return false;
+        }
+    </script>
+</body>
+</html>

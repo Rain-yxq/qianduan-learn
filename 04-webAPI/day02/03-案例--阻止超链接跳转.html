@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- 阻止超链接跳转的思路是，当鼠标点击超链接的时候通过js控制其 return false -->
+
+    <!--第一种写法-->
+    <a href="http://www.baidu.com"
+       onclick="alert('不好意思，这是一个不能跳转的链接'); return false">
+        百度一下</a>
+    <br>
+
+    <!--第二种写法-->
+    <script>
+        function f1() {
+            alert('真的不好意思，这是一个不能跳转的链接');
+            return false;
+        }
+    </script>
+    <!--调用f1()返回false，因此onclick接收到false还需再次返回一下-->
+    <a href="http://www.baidu.com" onclick="return f1()">百度一下</a>
+
+    <br>
+    <!--第三种写法-->
+    <a href="http://www.baidu.com" id="ak">百度一下</a>
+    <script>
+        document.getElementById("ak").onclick = function () {
+            alert("最后一次告诉你，这不能跳转");
+            return false;
+        }
+    </script>
+
+</body>
+</html>

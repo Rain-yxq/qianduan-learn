@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>金士百</li>
+        <li>雪花</li>
+        <li>百威</li>
+        <li>燕京</li>
+        <li>青岛</li>
+        <li>崂山</li>
+        <li>珠江</li>
+        <li>华丹</li>
+    </ul>
+    <script>
+        // 主要是两个事件:鼠标进入 onmouseover 和 鼠标离开 onmouseout
+        var liArrs = document.getElementsByTagName("li");
+        for (var i = 0; i < liArrs.length; i++) {
+            liArrs[i].onmouseover = function () {
+                this.style.backgroundColor = "red";
+            };
+
+            liArrs[i].onmouseout = function () {
+                this.style.backgroundColor = "";
+            }
+        }
+    </script>
+</body>
+</html>
